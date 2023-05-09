@@ -1,0 +1,16 @@
+{
+  "dependencies": {
+    "express": "^4.18.2",
+    "pkg": "^5.8.1"
+  },
+  "name": "mercadoliebre_bilo",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "test": "npx nodemon src/app.js",
+    "start": "node src/app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

@@ -1,0 +1,7 @@
+Configurar en el entry point la variable del puerto y que le indicamos al servidor que use
+const port = process.env.PORT || 3030;
+app.listen(port, console.log('Servidor OK en puerto ' + port));
+git add .
+git commit -m "subiendo ML"
+git push ….
+Una vez actualizado el GitHub, vamos a Render, nos creamos la cuenta, vinculamos con GitHub y seguimos los pasos que vimos hoy

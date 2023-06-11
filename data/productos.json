@@ -1,0 +1,9 @@
+[
+  {
+    "id": 1,
+    "nombreProducto": "Cafetera Moulinex",
+    "precio": 6770,
+    "descuentos": 40,
+    "img": "./img/"
+  }
+]

@@ -1,0 +1,58 @@
+h2 {
+    margin-left: 50px;
+}
+.section1 {
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.section1 img {
+    width:30vw;
+    position: relative;
+    left:-250px;
+    border-radius: 8px;
+    box-shadow:  5px 5px 5px rgba(153, 149, 149, 0.781);
+}
+
+#truck{
+    color: #39b54a; 
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: rotateZ 450ms;
+}
+.section1 #truck:hover {
+    transform: rotateZ(-90deg);
+    }
+.section1 #truck {
+    transition: all 450ms;
+        }
+.section1  a i {
+    margin-left:15px;
+    font-size: 16px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #39b54a;
+    background-color: #FFF;
+    border-radius: 50%;
+
+    }
+    .buttonMini {
+        background-color: #1259c3;
+        color: #ebebeb;
+        font-size: 14px;
+        border-radius: 8px; 
+        border: none;
+        width: 15vw;
+        padding: 5px;
+        margin-bottom: 20px;
+        position: relative;
+        left: 1000px;
+        transition: background-color 450ms;
+    }
+    .buttonMini:hover {
+        background-color: #0022AA;
+    
+    }

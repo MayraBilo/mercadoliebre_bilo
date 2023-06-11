@@ -1,12 +1,12 @@
 const controller = {
   getHome: (req, res) => {
-    res.render("home");
+    res.render("home", { title: "Home" });
   },
   getLogin: (req, res) => {
-    res.render("login");
+    res.render("login", { title: "Login" });
   },
   getRegister: (req, res) => {
-    res.render("register");
+    res.render("register", { title: "Register" });
   },
 };
 

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%-include ("./partials/header")%>
+    <main>
+      <div class="titulo"><h2>Lista de productos</h2></div>
+      <a href="/products/create"><button class="buttonMini">Crear producto nuevo</button></a>
+      <section class="section1">
+        
+          <% productos.forEach(producto =>{ %>
+            <article class="product">
+              <img
+              src="/img/<%=producto.imagen%>"
+              alt="<%=producto.nombreProducto%>"
+              />
+                <a href="a"><i class="fa-solid fa-truck" id="truck"></i></a>
+                <p class="precio">$<%= producto.precioProducto %> </p>
+                <p class="descuentos"><%=producto.descuento%>% OFF</p>
+                <a href="/products/<%= producto.id %>/detail"><h2><%=producto.nombreProducto%></h2></a>
+              </article>
+              <% }) %>
+       </section>
+     
+    </main>
+    <%-include ("./partials/footer")%>
+  </body>
+</html>

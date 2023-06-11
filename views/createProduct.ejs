@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%-include ("./partials/header")%>
+  <link rel="stylesheet" href="/css/create.css" />
+  <body>
+    <div class="form-newProduct">
+      <h1>Creá tu producto nuevo:</h1>
+      <form method="POST" action="/products">
+        <label> Nombre del producto </label>
+        <br />
+        <input type="text" name="nombreProducto" />
+        <br />
+        <label>Precio del producto</label>
+        <br />
+        <input type="number" name="precioProducto" />
+        <br />
+        <label> Descripción del producto </label>
+        <br />
+        <input type="text" name="descripcion" class="descripcion" />
+        <br />
+        <label>Imagen del producto</label>
+        <br />
+        <br />
+        <!-- <input type="image" name="imagenProducto" />-->
+        <input type="submit" class="button" value="Crear producto" />
+      </form>
+    </div>
+  </body>
+  <%-include ("./partials/footer")%>
+</html>

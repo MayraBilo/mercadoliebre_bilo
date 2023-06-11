@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%-include ("./partials/header")%>
+  <link rel="stylesheet" href="/css/productDetail.css" />
+  <body>
+    <div class="titulo"><h2>Detalle del producto</h2></div>
+    <h2><%=product.nombreProducto%></h2>
+    <section class="section1">
+      <div>
+        <img src="/img/<%=product.imagen%>" alt="<%=product.nombreProducto%>" />
+      </div>
+      <div>
+        <p><%= product.descripcion %></p>
+        <a href="a"><i class="fa-solid fa-truck" id="truck"></i></a>
+        <p class="precio">$<%= product.precioProducto %></p>
+        <p class="descuentos"><%=product.descuento%>% OFF</p>
+      </div>
+    </section>
+    <section>
+      <form
+        action="/products/<%= product.id %>/delete?_method=delete"
+        method="post"
+      >
+        <input type="submit" value="Eliminar producto" class="buttonMini" />
+      </form>
+    </section>
+    <section>
+      <a href="/products/<%= product.id %>/update">
+        <button class="buttonMini">Editar producto</button>
+      </a>
+    </section>
+  </body>
+
+  <%-include ("./partials/footer")%>
+</html>

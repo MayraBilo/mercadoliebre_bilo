@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%-include ("./partials/header")%>
+  <link rel="stylesheet" href="/css/create.css" />
+  <body>
+    <div class="form-newProduct">
+      <h1>Editá tu producto:</h1>
+      <form
+        method="POST"
+        action="/products/<%= product.id %>/update?_method=put"
+      >
+        <label> Nombre del producto </label>
+        <br />
+        <input
+          type="text"
+          name="nombreProducto"
+          value="<%= product.nombreProducto %>"
+        />
+        <br />
+        <label>Precio del producto</label>
+        <br />
+        <input
+          type="number"
+          name="precioProducto"
+          value="<%= product.precioProducto%>"
+        />
+        <br />
+        <label> Descripción del producto </label>
+        <br />
+        <input
+          type="text"
+          name="descripcion"
+          class="descripcion"
+          value="<%= product.descripcion %>"
+        />
+        <br />
+        <!-- <label>Imagen del producto</label>
+        <br />
+        <br />
+        <input type="image" name="imagenProducto" />-->
+        <input type="submit" class="button" value="Guardar cambios" />
+      </form>
+    </div>
+  </body>
+  <%-include ("./partials/footer")%>
+</html>

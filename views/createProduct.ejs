@@ -5,7 +5,7 @@
   <body>
     <div class="form-newProduct">
       <h1>Creá tu producto nuevo:</h1>
-      <form method="POST" action="/products">
+      <form method="POST" action="/products" enctype="multipart/form-data">
         <label> Nombre del producto </label>
         <br />
         <input type="text" name="nombreProducto" />
@@ -18,10 +18,12 @@
         <br />
         <input type="text" name="descripcion" class="descripcion" />
         <br />
-        <label>Imagen del producto</label>
+        <label> Descuento </label>
         <br />
+        <input type="text" name="descuento" class="descuento" />
+        <label for="imagenProducto">Imagen del producto</label>
         <br />
-        <!-- <input type="image" name="imagenProducto" />-->
+        <input type="file" name="imagenProducto" />
         <input type="submit" class="button" value="Crear producto" />
       </form>
     </div>

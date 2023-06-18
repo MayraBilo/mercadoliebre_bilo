@@ -34,10 +34,19 @@
           value="<%= product.descripcion %>"
         />
         <br />
-        <!-- <label>Imagen del producto</label>
+        <label> Descuento </label>
+        <br />
+        <input
+          type="text"
+          name="descuento"
+          class="descuento"
+          value="<%= product.descuento %>"
+        />
+        <br />
+        <label>Imagen del producto</label>
         <br />
         <br />
-        <input type="image" name="imagenProducto" />-->
+        <input type="file" name="imagenProducto" />
         <input type="submit" class="button" value="Guardar cambios" />
       </form>
     </div>

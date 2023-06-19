@@ -3,24 +3,47 @@
   <%-include ("./partials/header")%>
   <link rel="stylesheet" href="/css/create.css" />
   <body>
+    <ul class="errores">
+      <% errors.forEach(errorActual => { %>
+      <li><%= errorActual.msg %></li>
+      <% }); %>
+    </ul>
     <div class="form-newProduct">
       <h1>Creá tu producto nuevo:</h1>
       <form method="POST" action="/products" enctype="multipart/form-data">
         <label> Nombre del producto </label>
         <br />
-        <input type="text" name="nombreProducto" />
+        <input
+          type="text"
+          name="nombreProducto"
+          value="<%= values.nombreProducto %>"
+        />
         <br />
         <label>Precio del producto</label>
         <br />
-        <input type="number" name="precioProducto" />
+        <input
+          type="number"
+          name="precioProducto"
+          value="<%= values.precioProducto %>"
+        />
         <br />
         <label> Descripción del producto </label>
         <br />
-        <input type="text" name="descripcion" class="descripcion" />
+        <input
+          type="text"
+          name="descripcion"
+          class="descripcion"
+          value="<%= values.descripcion %>"
+        />
         <br />
         <label> Descuento </label>
         <br />
-        <input type="text" name="descuento" class="descuento" />
+        <input
+          type="text"
+          name="descuento"
+          class="descuento"
+          value="<%= values.descuento %>"
+        />
         <label for="imagenProducto">Imagen del producto</label>
         <br />
         <input type="file" name="imagenProducto" />

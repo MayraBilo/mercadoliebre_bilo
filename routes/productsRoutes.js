@@ -3,6 +3,7 @@ const router = express.Router();
 const productController = require("../controllers/productsController");
 const multer = require("multer");
 const path = require("path");
+const validationsMiddlewares = require("../middlewares/validations");
 
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
@@ -21,7 +22,10 @@ router.get("/", productController.getProductList);
 
 router.post(
   "/",
-  upload.single("imagenProducto"),
+  [
+    upload.single("imagenProducto"),
+    validationsMiddlewares.validateCreateProduct,
+  ],
   productController.postProduct
 );
 

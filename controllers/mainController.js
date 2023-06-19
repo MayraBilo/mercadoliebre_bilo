@@ -1,3 +1,5 @@
+const { validationResult } = require("express-validator");
+
 const controller = {
   getHome: (req, res) => {
     res.render("home", { title: "Home" });
@@ -7,6 +9,10 @@ const controller = {
   },
   getRegister: (req, res) => {
     res.render("register", { title: "Register" });
+  },
+  postRegister: (req, res) => {
+    let errors = validationResult("req");
+    res.render("register");
   },
 };
 

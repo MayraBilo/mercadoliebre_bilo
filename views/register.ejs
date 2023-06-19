@@ -2,10 +2,13 @@
 <html lang="en">
   <%-include ("./partials/header")%>
   <link rel="stylesheet" href="/css/register.css" />
-    <form action="a" method="POST" class="formRegister">
+    <form action="/register" method="POST" class="formRegister">
         <label class="datosPersonales">Datos personales</label>
         <div class="inputHorizontal">
-            <input type="text" name="nombreyapellido" placeholder="Nombre y Apellido" required>
+            <input type="text" name="nombre" placeholder="Nombre" required>
+        </div>
+        <div class="inputHorizontal">
+            <input type="text" name="apellido" placeholder="Apellido" required>
         </div>
         <div class="inputHorizontal">
             <input type="text" name="nombreUsuario" placeholder="Nombre de Usuari@" required>

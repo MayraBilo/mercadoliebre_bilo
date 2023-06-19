@@ -1,4 +1,6 @@
 const productsModel = require("../models/products");
+const expressValidator = require("express-validator");
+const validationsMiddlewares = require("../middlewares/validations");
 
 const controllers = {
   getProductList: (req, res) => {
@@ -7,7 +9,12 @@ const controllers = {
   },
   getCreate: (req, res) => {
     const productos = productsModel.findAll();
-    res.render("createProduct", { title: "Crear producto nuevo", productos });
+    res.render("createProduct", {
+      title: "Crear producto nuevo",
+      productos,
+      errors: [],
+      values: {},
+    });
   },
   getProductDetail: (req, res) => {
     const id = Number(req.params.id);
@@ -36,6 +43,16 @@ const controllers = {
     });
   },
   postProduct: (req, res) => {
+    let validation = expressValidator.validationResult(req);
+    console.log(validation);
+    if (validation.errors.length > 0) {
+      return res.render("createProduct", {
+        errors: validation.errors,
+        title: "Crear Producto",
+        values: req.body,
+      });
+    }
+
     let datos = req.body;
     datos.precioProducto = Number(datos.precioProducto);
     datos.imagenProducto = req.file ? req.file.filename : "sin foto";
